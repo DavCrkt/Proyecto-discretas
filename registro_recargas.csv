@@ -1,0 +1,3 @@
+recorrido,vehiculo,origen,destino,km,electrolinera,dist_electrolinera,bateria_antes_pct,motivo
+29,Renault Zoe R110,UIS Guatiguara,CENFER,18.69,Promotores del Oriente,1.2,18.1,nivel_critico
+25,Renault Zoe R110,Sede Catay,UIS Campus Central,27.42,Homecenter,2.79,13.2,nivel_critico

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0b68990b50b95f75bf67f528c6b59381 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:1000;
+                background:white;padding:10px;border-radius:8px;
+                border:2px solid gray;font-size:13px">
+      <b>Leyenda</b><br>
+      Electrolinera (rojo)<br>
+      Punto de referencia (azul)
+    </div>
+    
+            <div class="folium-map" id="map_0b68990b50b95f75bf67f528c6b59381" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0b68990b50b95f75bf67f528c6b59381 = L.map(
+                "map_0b68990b50b95f75bf67f528c6b59381",
+                {
+                    center: [7.09, -73.11],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9dc19d2b2270bf21f80a1ace1500c1a4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9dc19d2b2270bf21f80a1ace1500c1a4.addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var marker_248dfd91dd2cf910c272094830652e89 = L.marker(
+                [7.1157, -73.121],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_ff3105dac738eefce28fbc92f4b1a59b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7499e1435d7cfc0bc33765d4b728ce0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0c28c1b562f0fe8046eb6abda6a19bc = $(`<div id="html_b0c28c1b562f0fe8046eb6abda6a19bc" style="width: 100.0%; height: 100.0%;">⚡ Homecenter<br>Recargas: 0<br>Tipo: Comercial</div>`)[0];
+                popup_7499e1435d7cfc0bc33765d4b728ce0a.setContent(html_b0c28c1b562f0fe8046eb6abda6a19bc);
+            
+        
+
+        marker_248dfd91dd2cf910c272094830652e89.bindPopup(popup_7499e1435d7cfc0bc33765d4b728ce0a)
+        ;
+
+        
+    
+    
+            marker_248dfd91dd2cf910c272094830652e89.bindTooltip(
+                `<div>
+                     Homecenter
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_248dfd91dd2cf910c272094830652e89.setIcon(icon_ff3105dac738eefce28fbc92f4b1a59b);
+            
+    
+            var marker_263bc87dfe7bb74dd2508c2de5475f30 = L.marker(
+                [7.1151, -73.1087],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_aed7320c1027eac52514b12774ec15a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28d2d332e5e6f99b4cda8db03a1f1fb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c26a01f31ff6745ffd3a3351bc2af06c = $(`<div id="html_c26a01f31ff6745ffd3a3351bc2af06c" style="width: 100.0%; height: 100.0%;">⚡ CC Quinta Etapa<br>Recargas: 0<br>Tipo: C.Comercial</div>`)[0];
+                popup_28d2d332e5e6f99b4cda8db03a1f1fb6.setContent(html_c26a01f31ff6745ffd3a3351bc2af06c);
+            
+        
+
+        marker_263bc87dfe7bb74dd2508c2de5475f30.bindPopup(popup_28d2d332e5e6f99b4cda8db03a1f1fb6)
+        ;
+
+        
+    
+    
+            marker_263bc87dfe7bb74dd2508c2de5475f30.bindTooltip(
+                `<div>
+                     CC Quinta Etapa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_263bc87dfe7bb74dd2508c2de5475f30.setIcon(icon_aed7320c1027eac52514b12774ec15a1);
+            
+    
+            var marker_4a09e3f5217e880585f6d2a3cf71f4c1 = L.marker(
+                [7.0996, -73.1073],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_3bff1c6158d4975f009db8fa0cf8c3c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf334b814e42f1b53715e9a1f369b022 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_931932cc8c403961f1285566460de87a = $(`<div id="html_931932cc8c403961f1285566460de87a" style="width: 100.0%; height: 100.0%;">⚡ CC Cacique<br>Recargas: 0<br>Tipo: C.Comercial</div>`)[0];
+                popup_bf334b814e42f1b53715e9a1f369b022.setContent(html_931932cc8c403961f1285566460de87a);
+            
+        
+
+        marker_4a09e3f5217e880585f6d2a3cf71f4c1.bindPopup(popup_bf334b814e42f1b53715e9a1f369b022)
+        ;
+
+        
+    
+    
+            marker_4a09e3f5217e880585f6d2a3cf71f4c1.bindTooltip(
+                `<div>
+                     CC Cacique
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a09e3f5217e880585f6d2a3cf71f4c1.setIcon(icon_3bff1c6158d4975f009db8fa0cf8c3c9);
+            
+    
+            var marker_9b84fd27961e5ecc06ec8a1e295c9846 = L.marker(
+                [7.0707, -73.1069],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_306b73183d88f6f6ab64bad2df07f83b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed371be148677ce066d67e1ed5482393 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19d1987fbd975ee94dd1b5228aac4011 = $(`<div id="html_19d1987fbd975ee94dd1b5228aac4011" style="width: 100.0%; height: 100.0%;">⚡ CC Canaveral<br>Recargas: 0<br>Tipo: C.Comercial</div>`)[0];
+                popup_ed371be148677ce066d67e1ed5482393.setContent(html_19d1987fbd975ee94dd1b5228aac4011);
+            
+        
+
+        marker_9b84fd27961e5ecc06ec8a1e295c9846.bindPopup(popup_ed371be148677ce066d67e1ed5482393)
+        ;
+
+        
+    
+    
+            marker_9b84fd27961e5ecc06ec8a1e295c9846.bindTooltip(
+                `<div>
+                     CC Canaveral
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b84fd27961e5ecc06ec8a1e295c9846.setIcon(icon_306b73183d88f6f6ab64bad2df07f83b);
+            
+    
+            var marker_86afc17cb67924f06640052ae2319c5a = L.marker(
+                [7.0358, -73.0714],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_268bf1dae478b4234bf6d4c26014334c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8490d25ecaa58f37e8bf760e2e54c46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_784ed336dbd15cea079770806d77a1f3 = $(`<div id="html_784ed336dbd15cea079770806d77a1f3" style="width: 100.0%; height: 100.0%;">⚡ Terpel Piedecuesta<br>Recargas: 0<br>Tipo: Gasolinera</div>`)[0];
+                popup_d8490d25ecaa58f37e8bf760e2e54c46.setContent(html_784ed336dbd15cea079770806d77a1f3);
+            
+        
+
+        marker_86afc17cb67924f06640052ae2319c5a.bindPopup(popup_d8490d25ecaa58f37e8bf760e2e54c46)
+        ;
+
+        
+    
+    
+            marker_86afc17cb67924f06640052ae2319c5a.bindTooltip(
+                `<div>
+                     Terpel Piedecuesta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86afc17cb67924f06640052ae2319c5a.setIcon(icon_268bf1dae478b4234bf6d4c26014334c);
+            
+    
+            var marker_87a439ffdd98675d0b8993cdf62ab685 = L.marker(
+                [7.1141, -73.1229],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_d22517c711b4bb21716d83b50958db5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60be3f40a26c0af36b098c124950fd7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd5ba5581db4e8e289387b7f332c8dcb = $(`<div id="html_bd5ba5581db4e8e289387b7f332c8dcb" style="width: 100.0%; height: 100.0%;">⚡ Exito La Rosita<br>Recargas: 0<br>Tipo: Supermercado</div>`)[0];
+                popup_60be3f40a26c0af36b098c124950fd7f.setContent(html_bd5ba5581db4e8e289387b7f332c8dcb);
+            
+        
+
+        marker_87a439ffdd98675d0b8993cdf62ab685.bindPopup(popup_60be3f40a26c0af36b098c124950fd7f)
+        ;
+
+        
+    
+    
+            marker_87a439ffdd98675d0b8993cdf62ab685.bindTooltip(
+                `<div>
+                     Exito La Rosita
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87a439ffdd98675d0b8993cdf62ab685.setIcon(icon_d22517c711b4bb21716d83b50958db5b);
+            
+    
+            var marker_032c913d8d1ddb8b8126f08cbe0542ec = L.marker(
+                [7.07, -73.1048],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_1c4015feac0a55849f566c75040ca6ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c614da1c6196298ac70f9891da40bdf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd22757f9d16c9af37f0e50329441763 = $(`<div id="html_cd22757f9d16c9af37f0e50329441763" style="width: 100.0%; height: 100.0%;">⚡ CC La Florida<br>Recargas: 0<br>Tipo: C.Comercial</div>`)[0];
+                popup_c614da1c6196298ac70f9891da40bdf7.setContent(html_cd22757f9d16c9af37f0e50329441763);
+            
+        
+
+        marker_032c913d8d1ddb8b8126f08cbe0542ec.bindPopup(popup_c614da1c6196298ac70f9891da40bdf7)
+        ;
+
+        
+    
+    
+            marker_032c913d8d1ddb8b8126f08cbe0542ec.bindTooltip(
+                `<div>
+                     CC La Florida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_032c913d8d1ddb8b8126f08cbe0542ec.setIcon(icon_1c4015feac0a55849f566c75040ca6ee);
+            
+    
+            var marker_59dfa7aa2351bd01ee94fd503b6233eb = L.marker(
+                [7.0857, -73.1647],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_4f64059c1e1ef7682e39cca377ec98a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4deec67ed563ceef3adfb81ed89bd873 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ce74ab5c17900fb381c99eb2589684d = $(`<div id="html_3ce74ab5c17900fb381c99eb2589684d" style="width: 100.0%; height: 100.0%;">⚡ Promotores del Oriente<br>Recargas: 0<br>Tipo: Industrial</div>`)[0];
+                popup_4deec67ed563ceef3adfb81ed89bd873.setContent(html_3ce74ab5c17900fb381c99eb2589684d);
+            
+        
+
+        marker_59dfa7aa2351bd01ee94fd503b6233eb.bindPopup(popup_4deec67ed563ceef3adfb81ed89bd873)
+        ;
+
+        
+    
+    
+            marker_59dfa7aa2351bd01ee94fd503b6233eb.bindTooltip(
+                `<div>
+                     Promotores del Oriente
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59dfa7aa2351bd01ee94fd503b6233eb.setIcon(icon_4f64059c1e1ef7682e39cca377ec98a7);
+            
+    
+            var marker_f4837c28a317b37b7c539deda4a6ea4e = L.marker(
+                [7.1408, -73.1209],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_dec5ccf8187476bef765e0f471e3e440 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_473a230dde688e0804520757e603798a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39aba0377c6084947089c262e4893ea2 = $(`<div id="html_39aba0377c6084947089c262e4893ea2" style="width: 100.0%; height: 100.0%;">🎓 UIS Campus Central</div>`)[0];
+                popup_473a230dde688e0804520757e603798a.setContent(html_39aba0377c6084947089c262e4893ea2);
+            
+        
+
+        marker_f4837c28a317b37b7c539deda4a6ea4e.bindPopup(popup_473a230dde688e0804520757e603798a)
+        ;
+
+        
+    
+    
+            marker_f4837c28a317b37b7c539deda4a6ea4e.bindTooltip(
+                `<div>
+                     UIS Campus Central
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4837c28a317b37b7c539deda4a6ea4e.setIcon(icon_dec5ccf8187476bef765e0f471e3e440);
+            
+    
+            var marker_6ff8a987a85a97ecbcfb914075167d78 = L.marker(
+                [7.0617, -73.0885],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_f562e213bbe5c3f79769830aadea81e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f074e0927601d6e5e934c14fa8861ab6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_203edc336887017c4db9a925b37f112c = $(`<div id="html_203edc336887017c4db9a925b37f112c" style="width: 100.0%; height: 100.0%;">🎓 UIS Campus Florida</div>`)[0];
+                popup_f074e0927601d6e5e934c14fa8861ab6.setContent(html_203edc336887017c4db9a925b37f112c);
+            
+        
+
+        marker_6ff8a987a85a97ecbcfb914075167d78.bindPopup(popup_f074e0927601d6e5e934c14fa8861ab6)
+        ;
+
+        
+    
+    
+            marker_6ff8a987a85a97ecbcfb914075167d78.bindTooltip(
+                `<div>
+                     UIS Campus Florida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ff8a987a85a97ecbcfb914075167d78.setIcon(icon_f562e213bbe5c3f79769830aadea81e3);
+            
+    
+            var marker_960ba6678c3113cc2312e7327ad1b1ed = L.marker(
+                [6.9943, -73.0657],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_c25e3f0d9064c8b598b530d3208a3a09 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65adf558fe5013cf7486ace22e1915d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0e8dde56e77d4bd57af677659821edb = $(`<div id="html_d0e8dde56e77d4bd57af677659821edb" style="width: 100.0%; height: 100.0%;">🎓 UIS Guatiguara</div>`)[0];
+                popup_65adf558fe5013cf7486ace22e1915d7.setContent(html_d0e8dde56e77d4bd57af677659821edb);
+            
+        
+
+        marker_960ba6678c3113cc2312e7327ad1b1ed.bindPopup(popup_65adf558fe5013cf7486ace22e1915d7)
+        ;
+
+        
+    
+    
+            marker_960ba6678c3113cc2312e7327ad1b1ed.bindTooltip(
+                `<div>
+                     UIS Guatiguara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_960ba6678c3113cc2312e7327ad1b1ed.setIcon(icon_c25e3f0d9064c8b598b530d3208a3a09);
+            
+    
+            var marker_ee7cce1e38638c400c3a5045e6625724 = L.marker(
+                [7.1197, -73.1233],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_0e5bbbd0162d317648d0228db8b6a593 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_327cdea59d976a25bcdd843a53686781 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e647a1d6bfe28b7ea650567e0e2ab1b = $(`<div id="html_8e647a1d6bfe28b7ea650567e0e2ab1b" style="width: 100.0%; height: 100.0%;">🎓 UIS Bucarica</div>`)[0];
+                popup_327cdea59d976a25bcdd843a53686781.setContent(html_8e647a1d6bfe28b7ea650567e0e2ab1b);
+            
+        
+
+        marker_ee7cce1e38638c400c3a5045e6625724.bindPopup(popup_327cdea59d976a25bcdd843a53686781)
+        ;
+
+        
+    
+    
+            marker_ee7cce1e38638c400c3a5045e6625724.bindTooltip(
+                `<div>
+                     UIS Bucarica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee7cce1e38638c400c3a5045e6625724.setIcon(icon_0e5bbbd0162d317648d0228db8b6a593);
+            
+    
+            var marker_201d522f2e03fc9aefa4c0e135db53ea = L.marker(
+                [7.0824, -73.1543],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_c01500b0b73f05498612511ddecd2275 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03b4cf6d20d5fbb7b54800c058f49f14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_baa688228cfd7e9929ece1ff9479bcc6 = $(`<div id="html_baa688228cfd7e9929ece1ff9479bcc6" style="width: 100.0%; height: 100.0%;">🎓 CENFER</div>`)[0];
+                popup_03b4cf6d20d5fbb7b54800c058f49f14.setContent(html_baa688228cfd7e9929ece1ff9479bcc6);
+            
+        
+
+        marker_201d522f2e03fc9aefa4c0e135db53ea.bindPopup(popup_03b4cf6d20d5fbb7b54800c058f49f14)
+        ;
+
+        
+    
+    
+            marker_201d522f2e03fc9aefa4c0e135db53ea.bindTooltip(
+                `<div>
+                     CENFER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_201d522f2e03fc9aefa4c0e135db53ea.setIcon(icon_c01500b0b73f05498612511ddecd2275);
+            
+    
+            var marker_b9c834701afde4bf1d2b841945dac370 = L.marker(
+                [7.1163, -73.105],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_2da909f7ab8e470d207a31bfbcfca29c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e500971b0c53fdb10462ed749367fd02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22af49102c9783547e045e991668aeb7 = $(`<div id="html_22af49102c9783547e045e991668aeb7" style="width: 100.0%; height: 100.0%;">🎓 UNAB</div>`)[0];
+                popup_e500971b0c53fdb10462ed749367fd02.setContent(html_22af49102c9783547e045e991668aeb7);
+            
+        
+
+        marker_b9c834701afde4bf1d2b841945dac370.bindPopup(popup_e500971b0c53fdb10462ed749367fd02)
+        ;
+
+        
+    
+    
+            marker_b9c834701afde4bf1d2b841945dac370.bindTooltip(
+                `<div>
+                     UNAB
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9c834701afde4bf1d2b841945dac370.setIcon(icon_2da909f7ab8e470d207a31bfbcfca29c);
+            
+    
+            var marker_3c7d7c8d98a0537bd6444427ceb87ed1 = L.marker(
+                [7.105, -73.1234],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_98a2523ba795307cdd7a014767846087 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb9e15fdcae6e707bac3eee33bcc6269 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02c2bec28c9a7bb8b6e5526282c020df = $(`<div id="html_02c2bec28c9a7bb8b6e5526282c020df" style="width: 100.0%; height: 100.0%;">🎓 UTS</div>`)[0];
+                popup_bb9e15fdcae6e707bac3eee33bcc6269.setContent(html_02c2bec28c9a7bb8b6e5526282c020df);
+            
+        
+
+        marker_3c7d7c8d98a0537bd6444427ceb87ed1.bindPopup(popup_bb9e15fdcae6e707bac3eee33bcc6269)
+        ;
+
+        
+    
+    
+            marker_3c7d7c8d98a0537bd6444427ceb87ed1.bindTooltip(
+                `<div>
+                     UTS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c7d7c8d98a0537bd6444427ceb87ed1.setIcon(icon_98a2523ba795307cdd7a014767846087);
+            
+    
+            var marker_78e165ce8cb71c1db29bef4ff975317d = L.marker(
+                [7.0381, -73.0717],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_2941f7e6c9d8c95d9a3d1912275a5c1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ba0abc6f369bfc98f7d7a4ab5735166 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13416cb37dcb6ee46869788dc70fb8a8 = $(`<div id="html_13416cb37dcb6ee46869788dc70fb8a8" style="width: 100.0%; height: 100.0%;">🎓 UPB</div>`)[0];
+                popup_7ba0abc6f369bfc98f7d7a4ab5735166.setContent(html_13416cb37dcb6ee46869788dc70fb8a8);
+            
+        
+
+        marker_78e165ce8cb71c1db29bef4ff975317d.bindPopup(popup_7ba0abc6f369bfc98f7d7a4ab5735166)
+        ;
+
+        
+    
+    
+            marker_78e165ce8cb71c1db29bef4ff975317d.bindTooltip(
+                `<div>
+                     UPB
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78e165ce8cb71c1db29bef4ff975317d.setIcon(icon_2941f7e6c9d8c95d9a3d1912275a5c1f);
+            
+    
+            var marker_866101b22c8f66ddcdc2a58dbe725220 = L.marker(
+                [7.0656, -73.128],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_cc979118d63ed0d7b9b6cf671dfc0d5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba9d7fd651f1e128be5d05a9739a0612 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31a0cde09161512c33645920d330be0c = $(`<div id="html_31a0cde09161512c33645920d330be0c" style="width: 100.0%; height: 100.0%;">🎓 PTAR Rio Frio</div>`)[0];
+                popup_ba9d7fd651f1e128be5d05a9739a0612.setContent(html_31a0cde09161512c33645920d330be0c);
+            
+        
+
+        marker_866101b22c8f66ddcdc2a58dbe725220.bindPopup(popup_ba9d7fd651f1e128be5d05a9739a0612)
+        ;
+
+        
+    
+    
+            marker_866101b22c8f66ddcdc2a58dbe725220.bindTooltip(
+                `<div>
+                     PTAR Rio Frio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_866101b22c8f66ddcdc2a58dbe725220.setIcon(icon_cc979118d63ed0d7b9b6cf671dfc0d5e);
+            
+    
+            var marker_d53d01fa9df355767e5cc04bb2dd2bef = L.marker(
+                [6.976, -73.0415],
+                {
+}
+            ).addTo(map_0b68990b50b95f75bf67f528c6b59381);
+        
+    
+            var icon_1e677a7934bfb354c97ab5be2535c1a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f06a7ab983623a4c990557a9b096cb23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97126e2d200f347b08aafb1046ea98e8 = $(`<div id="html_97126e2d200f347b08aafb1046ea98e8" style="width: 100.0%; height: 100.0%;">🎓 Sede Catay</div>`)[0];
+                popup_f06a7ab983623a4c990557a9b096cb23.setContent(html_97126e2d200f347b08aafb1046ea98e8);
+            
+        
+
+        marker_d53d01fa9df355767e5cc04bb2dd2bef.bindPopup(popup_f06a7ab983623a4c990557a9b096cb23)
+        ;
+
+        
+    
+    
+            marker_d53d01fa9df355767e5cc04bb2dd2bef.bindTooltip(
+                `<div>
+                     Sede Catay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d53d01fa9df355767e5cc04bb2dd2bef.setIcon(icon_1e677a7934bfb354c97ab5be2535c1a5);
+            
+</script>
+</html>

@@ -1,0 +1,152 @@
+{
+  "electrolineras": [
+    {
+      "id": 0,
+      "nombre": "Homecenter",
+      "lat": 7.1157,
+      "lon": -73.121,
+      "tipo": "Comercial",
+      "recargas": 1
+    },
+    {
+      "id": 1,
+      "nombre": "CC Quinta Etapa",
+      "lat": 7.1151,
+      "lon": -73.1087,
+      "tipo": "C.Comercial",
+      "recargas": 0
+    },
+    {
+      "id": 2,
+      "nombre": "CC Cacique",
+      "lat": 7.0996,
+      "lon": -73.1073,
+      "tipo": "C.Comercial",
+      "recargas": 0
+    },
+    {
+      "id": 3,
+      "nombre": "CC Canaveral",
+      "lat": 7.0707,
+      "lon": -73.1069,
+      "tipo": "C.Comercial",
+      "recargas": 0
+    },
+    {
+      "id": 4,
+      "nombre": "Terpel Piedecuesta",
+      "lat": 7.0358,
+      "lon": -73.0714,
+      "tipo": "Gasolinera",
+      "recargas": 0
+    },
+    {
+      "id": 5,
+      "nombre": "Exito La Rosita",
+      "lat": 7.1141,
+      "lon": -73.1229,
+      "tipo": "Supermercado",
+      "recargas": 0
+    },
+    {
+      "id": 6,
+      "nombre": "CC La Florida",
+      "lat": 7.07,
+      "lon": -73.1048,
+      "tipo": "C.Comercial",
+      "recargas": 0
+    },
+    {
+      "id": 7,
+      "nombre": "Promotores del Oriente",
+      "lat": 7.0857,
+      "lon": -73.1647,
+      "tipo": "Industrial",
+      "recargas": 1
+    }
+  ],
+  "puntos_referencia": [
+    {
+      "id": 10,
+      "nombre": "UIS Campus Central",
+      "lat": 7.1408,
+      "lon": -73.1209
+    },
+    {
+      "id": 11,
+      "nombre": "UIS Campus Florida",
+      "lat": 7.0617,
+      "lon": -73.0885
+    },
+    {
+      "id": 12,
+      "nombre": "UIS Guatiguara",
+      "lat": 6.9943,
+      "lon": -73.0657
+    },
+    {
+      "id": 13,
+      "nombre": "UIS Bucarica",
+      "lat": 7.1197,
+      "lon": -73.1233
+    },
+    {
+      "id": 14,
+      "nombre": "CENFER",
+      "lat": 7.0824,
+      "lon": -73.1543
+    },
+    {
+      "id": 15,
+      "nombre": "UNAB",
+      "lat": 7.1163,
+      "lon": -73.105
+    },
+    {
+      "id": 16,
+      "nombre": "UTS",
+      "lat": 7.105,
+      "lon": -73.1234
+    },
+    {
+      "id": 17,
+      "nombre": "UPB",
+      "lat": 7.0381,
+      "lon": -73.0717
+    },
+    {
+      "id": 18,
+      "nombre": "PTAR Rio Frio",
+      "lat": 7.0656,
+      "lon": -73.128
+    },
+    {
+      "id": 19,
+      "nombre": "Sede Catay",
+      "lat": 6.976,
+      "lon": -73.0415
+    }
+  ],
+  "vehiculos": [
+    {
+      "id": 0,
+      "nombre": "Mercedes-Benz EQS 450+",
+      "gama": "Alta",
+      "bateria_kwh": 107.8,
+      "rango_km": 770,
+      "bateria_actual_pct": 100.0,
+      "recargas_totales": 0,
+      "km_recorridos": 0.0
+    },
+    {
+      "id": 1,
+      "nombre": "Renault Zoe R110",
+      "gama": "Baja",
+      "bateria_kwh": 52.0,
+      "rango_km": 395,
+      "bateria_actual_pct": 82.10866180232375,
+      "recargas_totales": 2,
+      "km_recorridos": 745.3119275789774
+    }
+  ]
+}

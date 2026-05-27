@@ -1,0 +1,19 @@
+============================================================
+REPORTE SISTEMA ELECTROLINERAS - BUCARAMANGA 2026
+Proyecto Integrador | Facultad Ing. Ciencia de Datos - UIS
+============================================================
+Total recargas registradas: 2
+
+ELECTROLINERAS (ordenadas por uso):
+  Homecenter                     1 recargas
+  Promotores del Oriente         1 recargas
+  CC Quinta Etapa                0 recargas
+  CC Cacique                     0 recargas
+  CC Canaveral                   0 recargas
+  Terpel Piedecuesta             0 recargas
+  Exito La Rosita                0 recargas
+  CC La Florida                  0 recargas
+
+VEHICULOS:
+  Mercedes-Benz EQS 450+         0 recargas | 0.0 km recorridos
+  Renault Zoe R110               2 recargas | 745.3 km recorridos
